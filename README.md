@@ -1,7 +1,7 @@
-# Feed-corporation
+# ATTENTION:
 Add-on to the RimRound mod
 
-ATTENTION!: I only have a superficial understanding of programming,
+ATTENTION: I only have a superficial understanding of programming,
 so the mod's code was generated using AI, while 99% of the textures were drawn by me.
 This mod was created as part of a new hobby of mine; as the name implies,
 it wasn't made to be taken too seriously, so the game balance is somewhat off—thanks for understanding! ;3
