@@ -1,7 +1,6 @@
 # Feed-corporation
 Add-on to the RimRound mod
 
-Mod author: LostReason8
 ATTENTION!: I only have a superficial understanding of programming,
 so the mod's code was generated using AI, while 99% of the textures were drawn by me.
 This mod was created as part of a new hobby of mine; as the name implies,
