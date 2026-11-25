@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <!-- Food monster sounds. The .wav files are in the Sounds/FeedCorp folder; replace them with your own
+       (same names), or add more clips as extra <li Class="AudioGrain_Clip"> entries. -->
+
+  <!-- Idle / moving: random gurgling calls -->
+  <SoundDef>
+    <defName>FC_MonsterCall</defName>
+    <context>MapOnly</context>
+    <maxSimultaneous>2</maxSimultaneous>
+    <subSounds>
+      <li>
+        <grains>
+          <li Class="AudioGrain_Clip"><clipPath>FeedCorp/MonsterSquelch1</clipPath></li>
+          <li Class="AudioGrain_Clip"><clipPath>FeedCorp/MonsterSquelch2</clipPath></li>
+          <li Class="AudioGrain_Clip"><clipPath>FeedCorp/MonsterSquelch3</clipPath></li>
+        </grains>
+        <volumeRange>89~99</volumeRange>
+        <pitchRange>0.9~1.1</pitchRange>
+        <distRange>5~45</distRange>
+      </li>
+    </subSounds>
+  </SoundDef>
+</Defs>

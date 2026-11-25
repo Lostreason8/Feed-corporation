@@ -1,0 +1,217 @@
+<?xml version="1.0" encoding="utf-8" ?>
+
+<Defs>
+	<ThingDef ParentName="MealBase" Name= "FC_NonRotMeal" Abstract ="True">
+		<defName>NonRotMeal</defName>
+		<label>Non rot meal</label>
+		<description>Food doesn't rot</description>
+		<graphicData>
+			<texPath>Things/Item/FoodFatting/PigFeed</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+		</graphicData>
+		<ingestible>
+			<preferability>MealSimple</preferability>
+        </ingestible>
+	</ThingDef>
+	
+	  <!--*************************************************************-->
+	  <!--*************************************************************-->
+	
+	<ThingDef ParentName="FC_NonRotMeal">
+		<defName>PigFeed</defName>
+		<label>Pig feed</label>
+		<description>Pig feed is great for fattening up any pig on your farm! Do not eat it as it can cause obesity.</description>
+		<graphicData>
+			<texPath>Things/Item/FoodFatting/PigFeed</texPath>
+			<graphicClass>Graphic_StackCount</graphicClass>
+			<drawSize>(0.6,0.6)</drawSize>
+		</graphicData>
+		<statBases>
+			<DeteriorationRate>0.25</DeteriorationRate>
+		    <Beauty>-3</Beauty>
+			<MarketValue>4</MarketValue>
+			<WorkToMake>100</WorkToMake>
+			<Nutrition>20</Nutrition>
+			<Mass>0.88</Mass>
+		</statBases>
+		<stackLimit>20</stackLimit>
+		<ingestible>
+			<ingestSound>Meal_Eat</ingestSound>
+			<tasteThought>AtePigFeed</tasteThought> 
+        </ingestible>
+		<comps>
+			<li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
+                <compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
+                <fullnessToNutritionRatio>0.05</fullnessToNutritionRatio> <!--1/4-->
+			</li>		
+		</comps>
+	</ThingDef>
+
+	<ThingDef ParentName="FC_NonRotMeal">
+		<defName>FC_Bun</defName>
+		<label>Bun</label>
+		<description>A soft, fluffy bun, it makes bellies grow well!</description>
+		<graphicData>
+			<texPath>Things/Item/FoodFatting/FC_Bun</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(0.6,0.6)</drawSize>
+		</graphicData>
+		<statBases>
+			<DeteriorationRate>0.25</DeteriorationRate>
+		    <Beauty>0</Beauty>
+			<MarketValue>5</MarketValue>
+			<WorkToMake>100</WorkToMake>
+			<Nutrition>2</Nutrition>
+			<Mass>0.07</Mass>
+		</statBases>
+		<stackLimit>30</stackLimit>
+		<ingestible>
+			<ingestSound>Meal_Eat</ingestSound>  
+        </ingestible>
+		<comps>
+			<li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
+                <compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
+                <fullnessToNutritionRatio>0.3</fullnessToNutritionRatio> <!--1/4-->
+			</li>	
+			<li Class="CompProperties_Rottable">
+               <daysToRotStart>4</daysToRotStart>
+               <rotDestroys>true</rotDestroys>
+			</li>			
+		</comps>
+	</ThingDef>	
+	
+	<ThingDef ParentName="FC_NonRotMeal">
+		<defName>FC_Dumplings</defName>
+		<label>Dumplings</label>
+		<description>Juicy dumplings in butter, They're delicious! But the butter are very greasy, so be careful not to turn into a pilimena yourself :)</description>
+		<graphicData>
+			<texPath>Things/Item/FoodFatting/FC_Dumplings</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+			<drawSize>(0.6,0.6)</drawSize>
+		</graphicData>
+		<statBases>
+			<DeteriorationRate>0.25</DeteriorationRate>
+		    <Beauty>0</Beauty>
+			<MarketValue>15</MarketValue>
+			<WorkToMake>300</WorkToMake>
+			<Nutrition>4</Nutrition>
+			<Mass>0.30</Mass>
+		</statBases>
+		<stackLimit>10</stackLimit>
+		<ingestible>
+			<ingestSound>Meal_Eat</ingestSound>
+			<tasteThought>AteFineMeal</tasteThought>  
+        </ingestible>
+		<comps>
+			<li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
+                <compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
+                <fullnessToNutritionRatio>0.25</fullnessToNutritionRatio> <!--1/4-->
+			</li>	
+			<li Class="CompProperties_Rottable">
+               <daysToRotStart>4</daysToRotStart>
+               <rotDestroys>true</rotDestroys>
+			</li>			
+		</comps>
+	</ThingDef>	
+	
+	<ThingDef ParentName="FC_NonRotMeal">
+		<defName>FC_Pancake</defName>
+		<label>Pancake</label>
+		<description>Fluffy pancakes in butter</description>
+		<graphicData>
+			<texPath>Things/Item/FoodFatting/FC_Pancake</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<DeteriorationRate>0.01</DeteriorationRate>
+		    <Beauty>0</Beauty>
+			<MarketValue>8</MarketValue>
+			<WorkToMake>8</WorkToMake>
+			<Nutrition>15</Nutrition>
+			<Mass>0.4</Mass>
+		</statBases>
+		<stackLimit>10</stackLimit>
+		<ingestible>
+			<ingestSound>Meal_Eat</ingestSound>
+			<tasteThought>AteFineMeal</tasteThought>
+        </ingestible>
+		<comps>
+			<li Class="CompProperties_Rottable">
+				<daysToRotStart>4</daysToRotStart>
+				<rotDestroys>true</rotDestroys>
+			</li>
+			<li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
+                <compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
+                <fullnessToNutritionRatio>0.05</fullnessToNutritionRatio> <!--1/4-->
+			</li>			
+		</comps>
+	</ThingDef>
+	
+	<ThingDef ParentName="FC_NonRotMeal">
+		<defName>FC_Jelly</defName>
+		<label>Jelly</label>
+		<description>Sweet jelly</description>
+		<graphicData>
+			<texPath>Things/Item/FoodFatting/FC_Jelly</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<DeteriorationRate>0.01</DeteriorationRate>
+		    <Beauty>0</Beauty>
+			<MarketValue>8</MarketValue>
+			<WorkToMake>8</WorkToMake>
+			<Nutrition>15</Nutrition>
+			<Mass>0.4</Mass>
+		</statBases>
+		<stackLimit>10</stackLimit>
+		<ingestible>
+			<ingestSound>Meal_Eat</ingestSound>
+			<tasteThought>AteFineMeal</tasteThought>
+        </ingestible>
+		<comps>
+			<li Class="CompProperties_Rottable">
+				<daysToRotStart>4</daysToRotStart>
+				<rotDestroys>true</rotDestroys>
+			</li>
+			<li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
+                <compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
+                <fullnessToNutritionRatio>0.05</fullnessToNutritionRatio> <!--1/4-->
+			</li>			
+		</comps>
+	</ThingDef>
+	
+		<ThingDef ParentName="FC_NonRotMeal">
+		<defName>FC_MucilaginousSubstance</defName>
+		<label>Mucilaginous Substance</label>
+		<description>Very strange taste, but edible</description>
+		<graphicData>
+			<texPath>Things/Item/FoodFatting/FC_MucilaginousSubstance</texPath>
+			<graphicClass>Graphic_Single</graphicClass>
+		</graphicData>
+		<statBases>
+			<DeteriorationRate>0.01</DeteriorationRate>
+		    <Beauty>0</Beauty>
+			<MarketValue>4</MarketValue>
+			<WorkToMake>8</WorkToMake>
+			<Nutrition>4</Nutrition>
+			<Mass>0.4</Mass>
+		</statBases>
+		<stackLimit>200</stackLimit>
+		<ingestible>
+			<ingestSound>Meal_Eat</ingestSound>
+			<tasteThought>AteFineMeal</tasteThought>
+        </ingestible>
+		<tickerType>Rare</tickerType>
+		<comps>
+			<li Class="CompProperties_Rottable">
+				<daysToRotStart>4</daysToRotStart>
+				<rotDestroys>true</rotDestroys>
+			</li>
+			<li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
+                <compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
+                <fullnessToNutritionRatio>0.25</fullnessToNutritionRatio> <!--1/4-->
+			</li>			
+		</comps>
+	</ThingDef>
+	
+</Defs>

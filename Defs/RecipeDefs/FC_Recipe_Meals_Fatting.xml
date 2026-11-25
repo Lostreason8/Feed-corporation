@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>research Prerequisite
+
+  <RecipeDef ParentName="CookMealBase">
+    <defName>CookMealPigFeed</defName>
+    <label>cook pig feed</label>
+    <description>Cook a pig feed.</description>
+	<soundWorking>Recipe_CookMeal</soundWorking>
+	<effectWorking>Cook</effectWorking>
+	<recipeUsers>
+		<li>ElectricStove</li>
+		<li>FueledStove</li>
+	</recipeUsers>	
+	<fixedIngredientFilter>
+		<disallowedCategories>
+			<li>MeatRaw</li>
+		</disallowedCategories>
+    </fixedIngredientFilter>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>PlantFoodRaw</li>
+          </categories>
+        </filter>
+        <count>10.0</count>
+      </li>
+    </ingredients>
+    <products>
+      <PigFeed>1</PigFeed>
+    </products>
+  </RecipeDef>
+  
+  <RecipeDef ParentName="CookMealBase">
+    <defName>CookMealPigFeedBulk</defName>
+    <label>cook pig feed x4</label>
+    <description>Cook a pig feed x4.</description>
+	<soundWorking>Recipe_CookMeal</soundWorking>
+	<effectWorking>Cook</effectWorking>
+	<recipeUsers>
+		<li>ElectricStove</li>
+		<li>FueledStove</li>
+	</recipeUsers>	
+	<fixedIngredientFilter>
+		<disallowedCategories>
+			<li>MeatRaw</li>
+		</disallowedCategories>
+    </fixedIngredientFilter>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>PlantFoodRaw</li>
+          </categories>
+        </filter>
+        <count>40.0</count>
+      </li>
+    </ingredients>
+    <products>
+      <PigFeed>4</PigFeed>
+    </products>
+  </RecipeDef>
+  
+  <RecipeDef ParentName="CookMealBase">
+    <defName>CookMealBun</defName>
+    <label>Cook bun</label>
+    <description>Cook a Bun.</description>
+	<soundWorking>Recipe_CookMeal</soundWorking>
+	<effectWorking>Cook</effectWorking>
+	<recipeUsers>
+		<li>ElectricStove</li>
+		<li>FueledStove</li>
+	</recipeUsers>	
+	<fixedIngredientFilter>
+		<disallowedCategories>
+			<li>MeatRaw</li>
+		</disallowedCategories>
+    </fixedIngredientFilter>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>PlantFoodRaw</li>
+          </categories>
+        </filter>
+        <count>5.0</count>
+      </li>
+    </ingredients>
+    <products>
+      <FC_Bun>1</FC_Bun>
+    </products>
+  </RecipeDef>
+  
+  <RecipeDef ParentName="CookMealBase">
+    <defName>CookMealBunBulk</defName>
+    <label>Cook bun x4</label>
+    <description>Cook a Bun x4.</description>
+	<soundWorking>Recipe_CookMeal</soundWorking>
+	<effectWorking>Cook</effectWorking>
+	<recipeUsers>
+		<li>ElectricStove</li>
+		<li>FueledStove</li>
+	</recipeUsers>	
+	<fixedIngredientFilter>
+		<disallowedCategories>
+			<li>MeatRaw</li>
+		</disallowedCategories>
+    </fixedIngredientFilter>
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>PlantFoodRaw</li>
+          </categories>
+        </filter>
+        <count>20.0</count>
+      </li>
+    </ingredients>
+    <products>
+      <FC_Bun>4</FC_Bun>
+    </products>
+  </RecipeDef>
+  
+  <RecipeDef ParentName="CookMealBase">
+    <defName>CookMealDumplings</defName>
+    <label>Cook dumplings</label>
+    <description>Cook Dumplings</description>
+	<soundWorking>Recipe_CookMeal</soundWorking>
+	<effectWorking>Cook</effectWorking>
+    <skillRequirements>
+      <Cooking>3</Cooking>
+    </skillRequirements>
+	<recipeUsers>
+		<li>ElectricStove</li>
+		<li>FueledStove</li>
+	</recipeUsers>	
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>MeatRaw</li>
+            <li>AnimalProductRaw</li>
+          </categories>
+        </filter>
+        <count>4.0</count>
+      </li>
+      <li>
+        <filter>
+          <categories>
+            <li>PlantFoodRaw</li>
+          </categories>
+        </filter>
+        <count>4.0</count>
+      </li>
+    </ingredients>
+    <products>
+      <FC_Dumplings>1</FC_Dumplings>
+    </products>
+  </RecipeDef>
+  
+    <RecipeDef ParentName="CookMealBase">
+    <defName>CookMealDumplingsBulk</defName>
+    <label>Cook dumplings x4</label>
+    <description>Cook Dumplings x4</description>
+	<soundWorking>Recipe_CookMeal</soundWorking>
+	<effectWorking>Cook</effectWorking>
+    <skillRequirements>
+      <Cooking>3</Cooking>
+    </skillRequirements>
+	<recipeUsers>
+		<li>ElectricStove</li>
+		<li>FueledStove</li>
+	</recipeUsers>	
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>MeatRaw</li>
+            <li>AnimalProductRaw</li>
+          </categories>
+        </filter>
+        <count>16.0</count>
+      </li>
+      <li>
+        <filter>
+          <categories>
+            <li>PlantFoodRaw</li>
+          </categories>
+        </filter>
+        <count>16.0</count>
+      </li>
+    </ingredients>
+    <products>
+      <FC_Dumplings>4</FC_Dumplings>
+    </products>
+  </RecipeDef>
+  
+    <RecipeDef ParentName="CookMealBase">
+    <defName>CookLocalPileOfFat</defName>
+    <label>Cook Local Pile Of Fat</label>
+    <description>Cook Local Pile Of Fat</description>
+	<soundWorking>Recipe_CookMeal</soundWorking>
+	<effectWorking>Cook</effectWorking>
+    <skillRequirements>
+      <Cooking>1</Cooking>
+    </skillRequirements>
+	<recipeUsers>
+		<li>ElectricStove</li>
+		<li>FueledStove</li>
+	</recipeUsers>	
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>MeatRaw</li>
+            <li>AnimalProductRaw</li>
+          </categories>
+        </filter>
+        <count>7.0</count>
+      </li>
+      <li>
+        <filter>
+          <categories>
+            <li>PlantFoodRaw</li>
+          </categories>
+        </filter>
+        <count>3.0</count>
+      </li>
+    </ingredients>
+    <products>
+      <LocalPileOfFat>1</LocalPileOfFat>
+    </products>
+  </RecipeDef>
+  
+    <RecipeDef ParentName="CookMealBase">
+    <defName>CookLocalPileOfFatBulk</defName>
+    <label>Cook Local Pile Of Fat x4</label>
+    <description>Cook Local Pile Of Fat x4</description>
+	<soundWorking>Recipe_CookMeal</soundWorking>
+	<effectWorking>Cook</effectWorking>
+    <skillRequirements>
+      <Cooking>1</Cooking>
+    </skillRequirements>
+	<recipeUsers>
+		<li>ElectricStove</li>
+		<li>FueledStove</li>
+	</recipeUsers>	
+    <ingredients>
+      <li>
+        <filter>
+          <categories>
+            <li>MeatRaw</li>
+            <li>AnimalProductRaw</li>
+          </categories>
+        </filter>
+        <count>28.0</count>
+      </li>
+      <li>
+        <filter>
+          <categories>
+            <li>PlantFoodRaw</li>
+          </categories>
+        </filter>
+        <count>12.0</count>
+      </li>
+    </ingredients>
+    <products>
+      <LocalPileOfFat>4</LocalPileOfFat>
+    </products>
+  </RecipeDef>
+</Defs>

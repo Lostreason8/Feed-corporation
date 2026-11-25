@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- 1. Розовая почва (плодородность 100%) -->
+  <TerrainDef>
+    <defName>FC_PinkSoil</defName>
+    <label>pink soil</label>
+    <description>Sweet pink soil. Plants grow well here.</description>
+    <texturePath>Terrain/Surfaces/FC_PinkSoil</texturePath>
+    <edgeType>FadeRough</edgeType>
+    <renderPrecedence>340</renderPrecedence>
+    <pathCost>2</pathCost>
+    <statBases>
+      <Beauty>0</Beauty>
+      <Cleanliness>-1</Cleanliness>
+    </statBases>
+    <affordances>
+      <li>Light</li>
+      <li>Medium</li>
+      <li>Heavy</li>
+      <li>GrowSoil</li>
+      <li>Diggable</li>
+    </affordances>
+    <fertility>1.0</fertility>
+    <takeFootprints>True</takeFootprints>
+  </TerrainDef>
+
+  <!-- 2. Тёмная насыщенная розовая почва (140%) -->
+  <TerrainDef>
+    <defName>FC_DeepPinkSoil</defName>
+    <label>rich pink soil</label>
+    <description>Dark, deeply colored pink soil. Extremely fertile.</description>
+    <texturePath>Terrain/Surfaces/FC_DeepPinkSoil</texturePath>
+    <edgeType>FadeRough</edgeType>
+    <renderPrecedence>350</renderPrecedence>
+    <pathCost>2</pathCost>
+    <statBases>
+      <Beauty>0</Beauty>
+      <Cleanliness>-1</Cleanliness>
+    </statBases>
+    <affordances>
+      <li>Light</li>
+      <li>Medium</li>
+      <li>Heavy</li>
+      <li>GrowSoil</li>
+      <li>Diggable</li>
+    </affordances>
+    <fertility>1.4</fertility>
+    <takeFootprints>True</takeFootprints>
+  </TerrainDef>
+
+  <!-- 3. Взбитые сливки (70%) -->
+  <TerrainDef>
+    <defName>FC_WhippedCream</defName>
+    <label>whipped cream</label>
+    <description>A thick layer of light pink whipped cream. Plants grow here, but not as well.</description>
+    <texturePath>Terrain/Surfaces/FC_WhippedCream</texturePath>
+    <edgeType>FadeRough</edgeType>
+    <renderPrecedence>330</renderPrecedence>
+    <pathCost>3</pathCost>
+    <statBases>
+      <Beauty>0</Beauty>
+      <Cleanliness>-1</Cleanliness>
+    </statBases>
+    <affordances>
+      <li>Light</li>
+      <li>Medium</li>
+      <li>Heavy</li>
+      <li>GrowSoil</li>
+      <li>Diggable</li>
+    </affordances>
+    <fertility>0.7</fertility>
+    <takeFootprints>True</takeFootprints>
+  </TerrainDef>
+
+  <!-- 4. Сахарная порода: естественная и гладкая (после добычи) -->
+  <TerrainDef>
+    <defName>FC_SugarRock_Rough</defName>
+    <label>rough sugar rock</label>
+    <description>Rough natural sugar rock. Nothing grows here.</description>
+    <texturePath>Terrain/Surfaces/FC_SugarRock_Rough</texturePath>
+    <edgeType>Hard</edgeType>
+    <renderPrecedence>190</renderPrecedence>
+    <pathCost>1</pathCost>
+    <statBases>
+      <Beauty>0</Beauty>
+      <Cleanliness>0</Cleanliness>
+    </statBases>
+    <affordances>
+      <li>Light</li>
+      <li>Medium</li>
+      <li>Heavy</li>
+    </affordances>
+    <fertility>0</fertility>
+  </TerrainDef>
+
+  <TerrainDef>
+    <defName>FC_SugarRock_Smooth</defName>
+    <label>smooth sugar rock</label>
+    <description>Smooth sugar rock floor.</description>
+    <texturePath>Terrain/Surfaces/FC_SugarRock_Smooth</texturePath>
+    <edgeType>Hard</edgeType>
+    <renderPrecedence>200</renderPrecedence>
+    <pathCost>0</pathCost>
+    <statBases>
+      <Beauty>0</Beauty>
+      <Cleanliness>0</Cleanliness>
+    </statBases>
+    <affordances>
+      <li>Light</li>
+      <li>Medium</li>
+      <li>Heavy</li>
+    </affordances>
+    <fertility>0</fertility>
+  </TerrainDef>
+
+  <!-- Светло-розовый сахар: заменяет каменистый грунт (гравий) у подножия гор -->
+  <TerrainDef>
+    <defName>FC_PinkSugar</defName>
+    <label>pink sugar</label>
+    <description>A layer of coarse light pink sugar.</description>
+    <texturePath>Terrain/Surfaces/FC_PinkSugar</texturePath>
+    <edgeType>FadeRough</edgeType>
+    <renderPrecedence>210</renderPrecedence>
+    <pathCost>1</pathCost>
+    <statBases>
+      <Beauty>0</Beauty>
+      <Cleanliness>0</Cleanliness>
+    </statBases>
+    <affordances>
+      <li>Light</li>
+      <li>Medium</li>
+      <li>Heavy</li>
+    </affordances>
+    <fertility>0</fertility>
+  </TerrainDef>
+
+  <!-- 5. Мелководье из молочного шоколада -->
+  <TerrainDef>
+    <defName>FC_MilkChocolateShallow</defName>
+    <label>milk chocolate shallows</label>
+    <description>Shallow melted milk chocolate. Pawns can wade through it, slowly.</description>
+    <texturePath>Terrain/Surfaces/FC_MilkChocolateShallow</texturePath>
+    <edgeType>FadeRough</edgeType>
+    <renderPrecedence>394</renderPrecedence>
+    <pathCost>30</pathCost>
+    <statBases>
+      <Beauty>0</Beauty>
+      <Cleanliness>-1</Cleanliness>
+    </statBases>
+    <fertility>0</fertility>
+  </TerrainDef>
+
+  <!-- 6. Глубокий водоём из тёмного шоколада (непроходим) -->
+  <TerrainDef>
+    <defName>FC_DarkChocolateDeep</defName>
+    <label>dark chocolate depths</label>
+    <description>Deep, dark melted chocolate. Impassable.</description>
+    <texturePath>Terrain/Surfaces/FC_DarkChocolateDeep</texturePath>
+    <edgeType>FadeRough</edgeType>
+    <renderPrecedence>396</renderPrecedence>
+    <pathCost>10000</pathCost>
+    <passability>Impassable</passability>
+    <statBases>
+      <Beauty>0</Beauty>
+      <Cleanliness>-1</Cleanliness>
+    </statBases>
+    <fertility>0</fertility>
+  </TerrainDef>
+
+</Defs>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- Перегонка жира в химтопливо: 30 жира -> 70 химтоплива (на перегонном аппарате) -->
+  <RecipeDef>
+    <defName>FC_Make_ChemfuelFromFat</defName>
+    <label>make chemfuel from fat</label>
+    <description>Distill chemfuel from fat.</description>
+    <jobString>Distilling chemfuel from fat.</jobString>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <workAmount>800</workAmount>
+    <recipeUsers><li>BiofuelRefinery</li></recipeUsers>
+    <ingredients>
+      <li>
+        <filter><thingDefs><li>FC_Fat</li></thingDefs></filter>
+        <count>30</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter><thingDefs><li>FC_Fat</li></thingDefs></fixedIngredientFilter>
+    <products><Chemfuel>70</Chemfuel></products>
+  </RecipeDef>
+
+</Defs>

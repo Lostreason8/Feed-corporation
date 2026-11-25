@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<!-- Тип "плоти" монстров из еды: раны не рисуются -->
+	<FleshTypeDef>
+		<defName>FC_BlobFlesh</defName>
+		<corpseCategory>CorpsesAnimal</corpseCategory>
+		<damageEffecter>Damage_HitFlesh</damageEffecter>
+		<isOrganic>true</isOrganic>
+		<genericWounds>
+			<li>
+				<texture>Things/Pawn/Wounds/FC_NoWound</texture>
+			</li>
+		</genericWounds>
+		<bandagedWounds>
+			<li>
+				<texture>Things/Pawn/Wounds/FC_NoWound</texture>
+			</li>
+		</bandagedWounds>
+	</FleshTypeDef>
+</Defs>

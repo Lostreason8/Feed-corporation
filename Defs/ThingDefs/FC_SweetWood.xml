@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- Сладкая древесина (упрощённая версия для проверки) -->
+  <ThingDef ParentName="ResourceBase">
+    <defName>FC_SweetWood</defName>
+    <label>sweet wood</label>
+    <description>Wood from candy trees. It can be used like ordinary wood, and it is also edible. It never rots, but it slowly deteriorates when left in the open.</description>
+    <possessionCount>10</possessionCount>
+    <graphicData>
+      <texPath>Things/Item/InedibleFood/FC_SweetWood</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+    </graphicData>
+    <useHitPoints>true</useHitPoints>
+    <healthAffectsPrice>false</healthAffectsPrice>
+    <statBases>
+      <MaxHitPoints>60</MaxHitPoints>
+      <MarketValue>1.5</MarketValue>
+      <Mass>0.4</Mass>
+      <Flammability>1.0</Flammability>
+      <DeteriorationRate>2</DeteriorationRate>
+      <Nutrition>0.05</Nutrition>
+    </statBases>
+    <thingCategories>
+      <li>ResourcesRaw</li>
+    </thingCategories>
+    <stackLimit>75</stackLimit>
+	<ingestible>
+	  <foodType>Processed</foodType>
+	  <preferability>RawBad</preferability>
+	  <ingestEffect>EatVegetarian</ingestEffect>
+	  <ingestSound>RawVegetable_Eat</ingestSound>
+	</ingestible>
+    <stuffProps>
+      <categories>
+        <li>Woody</li>
+      </categories>
+      <commonality>0.20</commonality>
+      <constructEffect>ConstructWood</constructEffect>
+      <appearance>Planks</appearance>
+      <color>(222,150,170)</color>
+      <soundImpactStuff>BulletImpact_Wood</soundImpactStuff>
+      <soundMeleeHitSharp>MeleeHit_Wood</soundMeleeHitSharp>
+      <soundMeleeHitBlunt>MeleeHit_Wood</soundMeleeHitBlunt>
+    </stuffProps>
+    <tradeability>All</tradeability>
+  </ThingDef>
+
+</Defs>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Defs>
+    <!-- Настрой при поедании отходов -->
+    <ThoughtDef>
+        <defName>AteWastepack</defName>
+        <thoughtClass>Thought_FoodEaten</thoughtClass>
+        <durationDays>1</durationDays> <!-- 24 часов -->
+        <stages>
+            <li>
+                <label>ate wastepack</label>
+                <description>I'm not waste disposal!</description>
+                <baseMoodEffect>-20</baseMoodEffect> <!-- Очень негативный настрой -->
+            </li>
+        </stages>
+    </ThoughtDef>
+	
+    <ThoughtDef>
+		<defName>AtePigFeed</defName>
+		<thoughtClass>Thought_FoodEaten</thoughtClass>
+		<durationDays>1</durationDays>
+		<stages>
+			<li>
+				<label>ate pig feed</label>
+				<description>Ew! I'm not a pig!</description>
+				<baseMoodEffect>-14</baseMoodEffect>
+			</li>
+		</stages>
+		<replaceThoughts>
+			<li>AteFineMeal</li>
+		</replaceThoughts>
+	</ThoughtDef>		
+</Defs>

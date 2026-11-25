@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- Фиолетовая кожа (ксеноген, добавляется хедиффом) -->
+  <GeneDef>
+    <defName>FC_BlueberrySkin</defName>
+    <label>blueberry skin and hair</label>
+    <description>Skin and hair stained deep violet by blueberry juice.</description>
+    <iconPath>UI/Icons/Genes/FC_BlueberrySkin</iconPath>
+    <displayCategory>Cosmetic</displayCategory>
+    <displayOrderInCategory>9000</displayOrderInCategory>
+    <skinColorOverride>(0.22, 0.18, 0.5)</skinColorOverride>
+    <hairColorOverride>(0.15, 0.1, 0.35)</hairColorOverride>
+    <exclusionTags><li>SkinColor</li><li>HairColor</li></exclusionTags>
+    <selectionWeight>0</selectionWeight>
+    <canGenerateInGeneSet>false</canGenerateInGeneSet>
+    <biostatCpx>0</biostatCpx>
+    <biostatMet>0</biostatMet>
+  </GeneDef>
+
+  <!-- Набор веса -->
+  <HediffDef>
+    <defName>FC_BlueberryInflation</defName>
+    <label>blueberry inflation</label>
+    <description>The body swells from blueberry juice.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(0.55, 0.25, 0.8)</defaultLabelColor>
+    <isBad>false</isBad>
+    <maxSeverity>1</maxSeverity>
+    <initialSeverity>1</initialSeverity>
+    <comps>
+      <li Class="ToxicRimRound.HediffCompProperties_BlueberryInflation">
+        <totalKilos>1500</totalKilos>
+        <kilosPerStep>4</kilosPerStep>
+        <tickInterval>80</tickInterval>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <!-- Черника -->
+  <ThingDef ParentName="ResourceBase">
+    <defName>FC_Blueberry</defName>
+    <label>Strange Blueberry</label>
+    <description>Simple blueberries... It smells very rich!</description>
+    <graphicData>
+      <texPath>Things/Item/FC_Blueberry/FC_Blueberry</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <drawSize>(0.3,0.3)</drawSize>
+    </graphicData>
+    <stackLimit>20</stackLimit>
+    <thingCategories><li>PlantFoodRaw</li></thingCategories>
+    <statBases>
+      <MaxHitPoints>40</MaxHitPoints>
+      <Mass>0.05</Mass>
+      <MarketValue>50</MarketValue>
+      <Flammability>1</Flammability>
+      <DeteriorationRate>6</DeteriorationRate>
+      <Nutrition>0.05</Nutrition>
+    </statBases>
+    <ingestible>
+      <foodType>VegetableOrFruit</foodType>
+      <preferability>RawTasty</preferability>
+      <ingestEffect>EatVegetarian</ingestEffect>
+      <ingestSound>RawVegetable_Eat</ingestSound>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>FC_BlueberryInflation</hediffDef>
+          <severity>1</severity>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>20</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+  </ThingDef>
+
+</Defs>

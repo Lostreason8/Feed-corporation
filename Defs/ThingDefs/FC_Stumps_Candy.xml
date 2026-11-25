@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- Пень после рубки сладкого дерева (светло-розовый, даёт сладкую древесину) -->
+  <ThingDef ParentName="StumpBase">
+    <defName>FC_ChoppedStump</defName>
+    <label>sweet stump</label>
+    <description>A pink stump left behind after a candy tree has been felled. It can be extracted for a little sweet wood. Left outdoors, it will deteriorate in time.</description>
+    <statBases>
+      <Beauty>0</Beauty>
+      <DeteriorationRate>20</DeteriorationRate>
+    </statBases>
+    <graphicData>
+      <texPath>Things/Plant/FC_Stumps/Chopped</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+      <shaderType>CutoutPlant</shaderType>
+      <shadowData>
+        <volume>(0.15, 0.1, 0.15)</volume>
+        <offset>(0,0,-0.2)</offset>
+      </shadowData>
+    </graphicData>
+    <plant>
+      <harvestWork>90</harvestWork>
+      <harvestedThingDef>FC_SweetWood</harvestedThingDef>
+    </plant>
+  </ThingDef>
+
+  <!-- Остатки сладкого дерева, уничтоженного уроном -->
+  <ThingDef ParentName="StumpBase">
+    <defName>FC_SmashedStump</defName>
+    <label>smashed sweet stump</label>
+    <description>The remnants of a candy tree destroyed by damage. It's ugly. It can be extracted for a little sweet wood. Left outdoors, it will deteriorate in time.</description>
+    <statBases>
+      <Beauty>-8</Beauty>
+    </statBases>
+    <graphicData>
+      <texPath>Things/Plant/FC_Stumps/Smashed</texPath>
+      <graphicClass>Graphic_Random</graphicClass>
+      <shaderType>CutoutPlant</shaderType>
+      <shadowData>
+        <volume>(0.15, 0.15, 0.15)</volume>
+        <offset>(0,0,-0.2)</offset>
+      </shadowData>
+    </graphicData>
+    <plant>
+      <harvestedThingDef>FC_SweetWood</harvestedThingDef>
+    </plant>
+  </ThingDef>
+
+</Defs>
