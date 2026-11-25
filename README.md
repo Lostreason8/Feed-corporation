@@ -19,4 +19,8 @@ https://rimworldwiki.com/wiki/Installing_mods
 This project is, unless otherwise specified, licensed under the Unlicense.
 Specific assets may be licensed under CC-BY.
 Those assets are specified in the ATTRIBUTION file.
+<<<<<<< HEAD
 You can read the CC-BY license [here](https://creativecommons.org/licenses/by/4.0/).
+=======
+You can read the CC-BY license [here](https://creativecommons.org/licenses/by/4.0/).
+>>>>>>> 29070e82e0b9200d81be357f31ca968049234e38
