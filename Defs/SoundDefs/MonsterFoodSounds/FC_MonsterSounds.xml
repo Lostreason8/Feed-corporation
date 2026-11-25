@@ -11,9 +11,9 @@
     <subSounds>
       <li>
         <grains>
-          <li Class="AudioGrain_Clip"><clipPath>FeedCorp/MonsterSquelch1</clipPath></li>
-          <li Class="AudioGrain_Clip"><clipPath>FeedCorp/MonsterSquelch2</clipPath></li>
-          <li Class="AudioGrain_Clip"><clipPath>FeedCorp/MonsterSquelch3</clipPath></li>
+          <li Class="AudioGrain_Clip"><clipPath>MonsterFood/MonsterSquelch1</clipPath></li>
+          <li Class="AudioGrain_Clip"><clipPath>MonsterFood/MonsterSquelch2</clipPath></li>
+          <li Class="AudioGrain_Clip"><clipPath>MonsterFood/MonsterSquelch3</clipPath></li>
         </grains>
         <volumeRange>89~99</volumeRange>
         <pitchRange>0.9~1.1</pitchRange>
