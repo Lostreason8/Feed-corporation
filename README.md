@@ -9,6 +9,7 @@ it wasn't made to be taken too seriously, so the game balance is somewhat off—
 And yes, I am a fetish artist: https://www.deviantart.com/lostreason8
 
 You need the latest version of the RimRound mod!
+https://github.com/Niwatori401/RimRound/tree/1.6-beta
 
 If you are unfamiliar with installing manual mods please follow the instructions here:
 https://rimworldwiki.com/wiki/Installing_mods
