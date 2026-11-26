@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <BiomeDef>
+    <defName>FC_CandyLand</defName>
+    <label>Sweet land</label>
+    <description>A sweet land of pink soil and whipped cream, with rivers and lakes of melted chocolate and mountains of sugar. It rains chocolate, and there's an abundance of food and sweet monsters. Living here will make you say goodbye to your figure forever.</description>
+    <workerClass>ToxicRimRound.BiomeWorker_Candy</workerClass>
+    <texture>World/Biomes/FC_Candy</texture>
+    <animalDensity>1.5</animalDensity>
+    <plantDensity>0.9</plantDensity>
+    <movementDifficulty>1.0</movementDifficulty>
+    <canBuildBase>true</canBuildBase>
+
+    <!-- Почвы по плодородности: сливки (низкая), розовая (средняя), тёмно-розовая (высокая) -->
+    <terrainsByFertility>
+      <li>
+        <terrain>FC_WhippedCream</terrain>
+        <min>-999</min>
+        <max>0.5</max>
+      </li>
+      <li>
+        <terrain>FC_PinkSoil</terrain>
+        <min>0.5</min>
+        <max>1.1</max>
+      </li>
+      <li>
+        <terrain>FC_DeepPinkSoil</terrain>
+        <min>1.1</min>
+        <max>999</max>
+      </li>
+    </terrainsByFertility>
+
+    <!-- Шоколадные озёра: пятна шума, по краю мелководье, в середине глубоко -->
+    <terrainPatchMakers>
+      <li>
+        <perlinFrequency>0.035</perlinFrequency>
+        <thresholds>
+          <li>
+            <terrain>FC_MilkChocolateShallow</terrain>
+            <min>0.50</min>
+            <max>0.60</max>
+          </li>
+          <li>
+            <terrain>FC_DarkChocolateDeep</terrain>
+            <min>0.60</min>
+            <max>999</max>
+          </li>
+        </thresholds>
+      </li>
+    </terrainPatchMakers>
+
+    <baseWeatherCommonalities>
+      <Clear>18</Clear>
+      <!-- Шоколадный дождь и туман вместо обычных -->
+      <FC_ChocolateRain>5</FC_ChocolateRain>
+      <FC_ChocolateFog>2</FC_ChocolateFog>
+      <DryThunderstorm>0.5</DryThunderstorm>
+      <RainyThunderstorm>1</RainyThunderstorm>
+      <SnowGentle>1</SnowGentle>
+      <SnowHard>0.5</SnowHard>
+    </baseWeatherCommonalities>
+
+    <wildPlants>
+      <!-- Трава (обильно) -->
+      <FC_Plant_Lollipops>4.0</FC_Plant_Lollipops>
+      <FC_Plant_SweetGrass>3.0</FC_Plant_SweetGrass>
+      <FC_Plant_CreamTubes>2.0</FC_Plant_CreamTubes>
+      <!-- Ягоды и лекарственная трава -->
+      <FC_Plant_JellyDropBush>0.8</FC_Plant_JellyDropBush>
+      <FC_Plant_MedicinalGrass>0.4</FC_Plant_MedicinalGrass>
+      <!-- Деревья -->
+      <FC_Plant_BlueLollipopTree>0.35</FC_Plant_BlueLollipopTree>
+      <FC_Plant_PinkLollipopTree>0.35</FC_Plant_PinkLollipopTree>
+      <FC_Plant_StrawberryCreamTree>0.35</FC_Plant_StrawberryCreamTree>
+      <FC_Plant_BlueberryCreamTree>0.35</FC_Plant_BlueberryCreamTree>
+      <FC_Plant_BlueJellyTree>0.3</FC_Plant_BlueJellyTree>
+      <FC_Plant_PinkJellyTree>0.3</FC_Plant_PinkJellyTree>
+    </wildPlants>
+
+	<wildAnimals>
+		<FC_CakeMonster>6.0</FC_CakeMonster>
+		<FC_PancakeMonster>6.0</FC_PancakeMonster>
+		<FC_SlimeFeeder>6.0</FC_SlimeFeeder>
+		<FC_JellyWorm>6.0</FC_JellyWorm>
+	</wildAnimals>
+  </BiomeDef>
+
+</Defs>

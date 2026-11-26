@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+  <!-- Животные умеренного леса в Candy land. Твои монстры в wildAnimals не трогаются. -->
+
+  <!-- Убираем мои старые тестовые записи, чтобы не было дублей -->
+  <Operation Class="PatchOperationRemove">
+    <xpath>/Defs/BiomeDef[defName="FC_CandyLand"]/wildAnimals/Squirrel</xpath>
+    <success>Always</success>
+  </Operation>
+  <Operation Class="PatchOperationRemove">
+    <xpath>/Defs/BiomeDef[defName="FC_CandyLand"]/wildAnimals/Rabbit</xpath>
+    <success>Always</success>
+  </Operation>
+  <Operation Class="PatchOperationRemove">
+    <xpath>/Defs/BiomeDef[defName="FC_CandyLand"]/wildAnimals/Hare</xpath>
+    <success>Always</success>
+  </Operation>
+
+  <!-- Плотность животных как у умеренного леса -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/BiomeDef[defName="FC_CandyLand"]/animalDensity</xpath>
+    <value>
+      <animalDensity>3.7</animalDensity>
+    </value>
+    <success>Always</success>
+  </Operation>
+
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/BiomeDef[defName="FC_CandyLand"]/wildAnimals</xpath>
+    <value>
+      <Donkey>0.20</Donkey>
+      <GuineaPig>0.45</GuineaPig>
+      <Yak>0.06</Yak>
+      <Bison>0.07</Bison>
+      <Horse>0.20</Horse>
+      <Hare>1.0</Hare>
+      <Squirrel>1.0</Squirrel>
+      <Rat>1.0</Rat>
+      <Deer>0.5</Deer>
+      <WildBoar>0.5</WildBoar>
+      <Turkey>0.5</Turkey>
+      <Raccoon>0.5</Raccoon>
+      <Ibex>0.5</Ibex>
+      <Muffalo>0.5</Muffalo>
+      <Alpaca>0.5</Alpaca>
+      <Boomalope>0.4</Boomalope>
+      <Boomrat>0.4</Boomrat>
+      <Tortoise>0.3</Tortoise>
+      <Gazelle>0.3</Gazelle>
+      <Megasloth>0.2</Megasloth>
+      <Rhinoceros>0.1</Rhinoceros>
+      <Bear_Grizzly>0.07</Bear_Grizzly>
+      <Wolf_Timber>0.07</Wolf_Timber>
+      <Fox_Red>0.07</Fox_Red>
+      <Cougar>0.07</Cougar>
+      <Lynx>0.07</Lynx>
+      <Warg>0.07</Warg>
+      <Porcupine MayRequire="Ludeon.RimWorld.Odyssey">0.2</Porcupine>
+      <Wolverine MayRequire="Ludeon.RimWorld.Odyssey">0.07</Wolverine>
+      <Mink MayRequire="Ludeon.RimWorld.Odyssey">0.1</Mink>
+      <Swan MayRequire="Ludeon.RimWorld.Odyssey">0.1</Swan>
+      <Badger MayRequire="Ludeon.RimWorld.Odyssey">0.2</Badger>
+      <Sparrow MayRequire="Ludeon.RimWorld.Odyssey">0.5</Sparrow>
+      <Crow MayRequire="Ludeon.RimWorld.Odyssey">0.5</Crow>
+      <Bluebird MayRequire="Ludeon.RimWorld.Odyssey">0.5</Bluebird>
+      <Quail MayRequire="Ludeon.RimWorld.Odyssey">0.5</Quail>
+    </value>
+    <success>Always</success>
+  </Operation>
+
+  <!-- Вьючные животные как в умеренном лесу -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/BiomeDef[defName="FC_CandyLand"]</xpath>
+    <value>
+      <allowedPackAnimals>
+        <li>Muffalo</li>
+        <li>Alpaca</li>
+      </allowedPackAnimals>
+    </value>
+    <success>Always</success>
+  </Operation>
+
+</Patch>

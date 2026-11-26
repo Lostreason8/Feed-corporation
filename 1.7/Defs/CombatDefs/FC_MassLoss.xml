@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- "Рана" без вида ранения, без боли и без кровотечения -->
+	<HediffDef>
+		<defName>FC_MassLossInjury</defName>
+		<label>lost mass</label>
+		<labelNoun>a loss of mass</labelNoun>
+		<description>Part of the body has been used up.</description>
+		<hediffClass>Hediff_Injury</hediffClass>
+		<tendable>false</tendable>
+		<displayWound>false</displayWound>
+		<injuryProps>
+			<painPerSeverity>0</painPerSeverity>
+			<averagePainPerSeverityPermanent>0</averagePainPerSeverityPermanent>
+			<bleedRate>0</bleedRate>
+			<canMerge>true</canMerge>
+		</injuryProps>
+	</HediffDef>
+
+	<!-- Урон, которым монстр "тратит" себя при ударе -->
+	<DamageDef>
+		<defName>FC_MassLoss</defName>
+		<label>mass loss</label>
+		<workerClass>DamageWorker_AddInjury</workerClass>
+		<externalViolence>false</externalViolence>
+		<makesBlood>false</makesBlood>
+		<canInterruptJobs>false</canInterruptJobs>
+		<makesAnimalsFlee>false</makesAnimalsFlee>
+		<hediff>FC_MassLossInjury</hediff>
+		<overkillPctToDestroyPart>0~0</overkillPctToDestroyPart>
+	</DamageDef>
+
+</Defs>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- Transformation + weight gain -->
+  <HediffDef>
+    <defName>FC_PigTransform</defName>
+    <label>pig transformation</label>
+    <description>The body is turning into a pig's body and swelling up.</description>
+    <hediffClass>HediffWithComps</hediffClass>
+    <defaultLabelColor>(1, 0.6, 0.7)</defaultLabelColor>
+    <isBad>false</isBad>
+    <maxSeverity>1</maxSeverity>
+    <initialSeverity>1</initialSeverity>
+    <comps>
+      <li Class="ToxicRimRound.HediffCompProperties_PigTransform">
+        <totalKilos>200</totalKilos>
+        <kilosPerStep>4</kilosPerStep>
+        <tickInterval>600</tickInterval>
+        <genes>
+          <li>SG_GeneDigestUpPlus</li>
+          <li>SG_GeneEatSpeedUpPlus</li>
+          <li>SG_GeneElasticUpPlus</li>
+          <li>SG_GeneWeightUpPlus</li>
+          <li>Ears_Pig|Pig ears|PigEars</li>
+          <li>Voice_Pig|Pig voice|PigVoice</li>
+          <li>StrongStomach|Strong stomach</li>
+          <li>RobustDigestion|Robust digestion</li>
+          <li>Nose_Pig|Pig nose|PigNose</li>
+        </genes>
+      </li>
+    </comps>
+  </HediffDef>
+
+  <!-- The pill -->
+  <ThingDef ParentName="ResourceBase">
+    <defName>FC_PigPill</defName>
+    <label>Pink pill</label>
+    <description>Strange pink jar with a pink pill, with a sticker of a fat pig on it.</description>
+    <graphicData>
+      <texPath>Things/Item/FC_PigPill/FC_PigPill</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <drawSize>(0.6,0.6)</drawSize>
+    </graphicData>
+    <stackLimit>25</stackLimit>
+    <thingCategories><li>Drugs</li></thingCategories>
+    <statBases>
+      <MaxHitPoints>50</MaxHitPoints>
+      <Mass>0.05</Mass>
+      <MarketValue>62</MarketValue>
+      <Flammability>1</Flammability>
+      <DeteriorationRate>1</DeteriorationRate>
+    </statBases>
+    <ingestible>
+      <foodType>Processed</foodType>
+      <preferability>NeverForNutrition</preferability>
+      <baseIngestTicks>60</baseIngestTicks>
+      <chairSearchRadius>0</chairSearchRadius>
+      <maxNumToIngestAtOnce>1</maxNumToIngestAtOnce>
+      <ingestCommandString>Take {0}</ingestCommandString>
+      <ingestReportString>Taking {0}.</ingestReportString>
+      <ingestSound>Ingest_Pill</ingestSound>
+      <ingestEffect>EatVegetarian</ingestEffect>
+      <outcomeDoers>
+        <li Class="IngestionOutcomeDoer_GiveHediff">
+          <hediffDef>FC_PigTransform</hediffDef>
+          <severity>1</severity>
+        </li>
+      </outcomeDoers>
+    </ingestible>
+  </ThingDef>
+
+</Defs>

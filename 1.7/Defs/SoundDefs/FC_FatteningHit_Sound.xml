@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- Sound played when a mechanoid fattening bullet hits a pawn.
+       Put your sound file here:  <mod folder>\Sounds\FeedCorp\FatteningHit.wav   (.ogg or .mp3 also work)
+       clipPath is the path inside the Sounds folder WITHOUT the extension. -->
+	<SoundDef>
+	<defName>FC_FatteningHit</defName>
+	<context>MapOnly</context>
+	<maxSimultaneous>3</maxSimultaneous>
+	<subSounds>
+		<li>
+		<grains>
+			<li Class="AudioGrain_Clip">
+			<clipPath>Weapon/GunShots/GunHit</clipPath>
+			</li>
+		</grains>
+		<volumeRange>40~50</volumeRange>
+		<pitchRange>0.9~1.1</pitchRange>
+		</li>
+	</subSounds>
+	</SoundDef>
+
+</Defs>

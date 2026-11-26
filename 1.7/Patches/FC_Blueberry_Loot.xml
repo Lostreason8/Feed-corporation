@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+  <!-- Магическая черника в ящиках и сейфах. weight подобран так, чтобы шанс был ~5% на выпадение предмета (как у гиперткани).
+       Хотите реже/чаще - меняйте число <weight> у нужной записи. -->
+
+  <!-- ancient complex: rooms -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/ThingSetMakerDef[defName="MapGen_AncientComplexRoomLoot_Default"]/root/options</xpath>
+    <value>
+      <li>
+        <weight>0.4</weight>
+        <thingSetMaker Class="ThingSetMaker_StackCount">
+          <fixedParams>
+            <filter><thingDefs><li>FC_Blueberry</li></thingDefs></filter>
+            <countRange>1~1</countRange>
+          </fixedParams>
+        </thingSetMaker>
+      </li>
+    </value>
+    <success>Always</success>
+  </Operation>
+
+  <!-- ancient complex: better rooms -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/ThingSetMakerDef[defName="MapGen_AncientComplexRoomLoot_Better"]/root/options</xpath>
+    <value>
+      <li>
+        <weight>0.5</weight>
+        <thingSetMaker Class="ThingSetMaker_StackCount">
+          <fixedParams>
+            <filter><thingDefs><li>FC_Blueberry</li></thingDefs></filter>
+            <countRange>1~1</countRange>
+          </fixedParams>
+        </thingSetMaker>
+      </li>
+    </value>
+    <success>Always</success>
+  </Operation>
+
+  <!-- ancient complex: security crate -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/ThingSetMakerDef[defName="MapGen_AncientComplex_SecurityCrate"]/root/options</xpath>
+    <value>
+      <li>
+        <weight>0.3</weight>
+        <thingSetMaker Class="ThingSetMaker_StackCount">
+          <fixedParams>
+            <filter><thingDefs><li>FC_Blueberry</li></thingDefs></filter>
+            <countRange>1~1</countRange>
+          </fixedParams>
+        </thingSetMaker>
+      </li>
+    </value>
+    <success>Always</success>
+  </Operation>
+
+  <!-- ancient safe -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/ThingSetMakerDef[defName="Reward_AncientSafe"]/root/options</xpath>
+    <value>
+      <li>
+        <weight>0.3</weight>
+        <thingSetMaker Class="ThingSetMaker_StackCount">
+          <fixedParams>
+            <filter><thingDefs><li>FC_Blueberry</li></thingDefs></filter>
+            <countRange>1~1</countRange>
+          </fixedParams>
+        </thingSetMaker>
+      </li>
+    </value>
+    <success>Always</success>
+  </Operation>
+
+  <!-- ancient sealed container -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/ThingSetMakerDef[defName="Reward_AncientSealedContainer"]/root/options</xpath>
+    <value>
+      <li>
+        <weight>0.15</weight>
+        <thingSetMaker Class="ThingSetMaker_StackCount">
+          <fixedParams>
+            <filter><thingDefs><li>FC_Blueberry</li></thingDefs></filter>
+            <countRange>1~1</countRange>
+          </fixedParams>
+        </thingSetMaker>
+      </li>
+    </value>
+    <success>Always</success>
+  </Operation>
+
+  <!-- malfunctioning transport pod (space) -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/ThingSetMakerDef[defName="Reward_MalfunctioningTransportPod"]/root/options</xpath>
+    <value>
+      <li>
+        <weight>1.0</weight>
+        <thingSetMaker Class="ThingSetMaker_StackCount">
+          <fixedParams>
+            <filter><thingDefs><li>FC_Blueberry</li></thingDefs></filter>
+            <countRange>1~1</countRange>
+          </fixedParams>
+        </thingSetMaker>
+      </li>
+    </value>
+    <success>Always</success>
+  </Operation>
+
+  <!-- hermetic crate -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/ThingSetMakerDef[defName="MapGen_ScarlandsHermeticCrate"]/root/options</xpath>
+    <value>
+      <li>
+        <weight>0.5</weight>
+        <thingSetMaker Class="ThingSetMaker_StackCount">
+          <fixedParams>
+            <filter><thingDefs><li>FC_Blueberry</li></thingDefs></filter>
+            <countRange>1~1</countRange>
+          </fixedParams>
+        </thingSetMaker>
+      </li>
+    </value>
+    <success>Always</success>
+  </Operation>
+
+  <!-- high value crate -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/ThingSetMakerDef[defName="MapGen_HighValueCrate"]/root/options</xpath>
+    <value>
+      <li>
+        <weight>0.4</weight>
+        <thingSetMaker Class="ThingSetMaker_StackCount">
+          <fixedParams>
+            <filter><thingDefs><li>FC_Blueberry</li></thingDefs></filter>
+            <countRange>1~1</countRange>
+          </fixedParams>
+        </thingSetMaker>
+      </li>
+    </value>
+    <success>Always</success>
+  </Operation>
+
+</Patch>

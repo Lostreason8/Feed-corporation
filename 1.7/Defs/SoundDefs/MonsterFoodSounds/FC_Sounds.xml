@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+	<SoundDef>
+		<defName>FC_SwallowHit</defName>
+		<context>MapOnly</context>
+		<maxVoices>6</maxVoices>
+		<maxSimultaneous>2</maxSimultaneous>
+		<priorityMode>PrioritizeNearest</priorityMode>
+		<subSounds>
+			<li>
+				<grains>
+					<li Class="AudioGrain_Clip"><clipPath>Organic/Swallow/SwallowEasy</clipPath></li>
+					<li Class="AudioGrain_Clip"><clipPath>Organic/Swallow/SwallowNormal</clipPath></li>
+				</grains>
+				<volumeRange>40~40</volumeRange>
+				<pitchRange>0.9~1.1</pitchRange>
+				<distRange>3~30</distRange>
+			</li>
+		</subSounds>
+	</SoundDef>
+</Defs>

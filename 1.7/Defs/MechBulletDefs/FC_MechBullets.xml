@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- READY TEMPLATE: kilos added by ONE bullet hit, per mechanoid.
+       Change only the numbers:
+         <kilos>          kg added by one hit
+         <durationTicks>  how long the weight stays (60000 = 1 day, 0 = permanent)
+       Mechanoids and turrets that are NOT listed here use the default (3 kg, 3600 ticks).
+       Names that do not exist in your game (for example a DLC you do not have) are simply ignored.
+       Only plain bullets fatten: lasers, flamethrowers and explosions are never affected.
+       To add a mod mechanoid or a turret: copy one block, change defName and weaponDefName. -->
+
+  <!-- Pikeman -->
+  <ToxicRimRound.MechBulletKilosDef>
+    <defName>FC_MechBullet_Mech_Pikeman</defName>
+    <weaponDefName>Mech_Pikeman</weaponDefName>
+    <kilos>20</kilos>
+    <durationTicks>3600</durationTicks>
+  </ToxicRimRound.MechBulletKilosDef>
+
+  <!-- Militor -->
+  <ToxicRimRound.MechBulletKilosDef>
+    <defName>FC_MechBullet_Mech_Militor</defName>
+    <weaponDefName>Mech_Militor</weaponDefName>
+    <kilos>2</kilos>
+    <durationTicks>3600</durationTicks>
+  </ToxicRimRound.MechBulletKilosDef>
+
+  <!-- Legionary -->
+  <ToxicRimRound.MechBulletKilosDef>
+    <defName>FC_MechBullet_Mech_Legionary</defName>
+    <weaponDefName>Mech_Legionary</weaponDefName>
+    <kilos>4</kilos>
+    <durationTicks>3600</durationTicks>
+  </ToxicRimRound.MechBulletKilosDef>
+
+  <!-- Centipede -->
+  <ToxicRimRound.MechBulletKilosDef>
+    <defName>FC_MechBullet_Mech_Centipede</defName>
+    <weaponDefName>Mech_Centipede</weaponDefName>
+    <kilos>3</kilos>
+    <durationTicks>3600</durationTicks>
+  </ToxicRimRound.MechBulletKilosDef>
+
+  <!-- Lancer -->
+  <ToxicRimRound.MechBulletKilosDef>
+    <defName>FC_MechBullet_Mech_Lancer</defName>
+    <weaponDefName>Mech_Lancer</weaponDefName>
+    <kilos>40</kilos>
+    <durationTicks>3600</durationTicks>
+  </ToxicRimRound.MechBulletKilosDef>
+
+  <!-- Tesseron -->
+  <ToxicRimRound.MechBulletKilosDef>
+    <defName>FC_MechBullet_Mech_Tesseron</defName>
+    <weaponDefName>Mech_Tesseron</weaponDefName>
+    <kilos>6</kilos>
+    <durationTicks>3600</durationTicks>
+  </ToxicRimRound.MechBulletKilosDef>
+
+  <!-- Diabolus -->
+  <ToxicRimRound.MechBulletKilosDef>
+    <defName>FC_MechBullet_Mech_Diabolus</defName>
+    <weaponDefName>Mech_Diabolus</weaponDefName>
+    <kilos>6</kilos>
+    <durationTicks>3600</durationTicks>
+  </ToxicRimRound.MechBulletKilosDef>
+
+  <!-- Warqueen -->
+  <ToxicRimRound.MechBulletKilosDef>
+    <defName>FC_MechBullet_Mech_Warqueen</defName>
+    <weaponDefName>Mech_Warqueen</weaponDefName>
+    <kilos>6</kilos>
+    <durationTicks>3600</durationTicks>
+  </ToxicRimRound.MechBulletKilosDef>
+
+  <!-- ===== Mechanoid cluster turrets (Royalty): auto charge turret, mini-slugger turret, auto mortar, auto inferno turret =====
+       "Turret_Auto*" with a star means: every turret whose name starts with Turret_Auto.
+       Incendiary (inferno) and explosive (mortar) shells never fatten, so in practice this affects
+       the charge and slug turrets. If a turret is not covered, the default (3 kg) is used anyway. -->
+  <ToxicRimRound.MechBulletKilosDef>
+    <defName>FC_MechBullet_ClusterTurrets</defName>
+    <weaponDefName>Turret_Auto*</weaponDefName>
+    <kilos>3</kilos>
+    <durationTicks>3600</durationTicks>
+  </ToxicRimRound.MechBulletKilosDef>
+
+</Defs>

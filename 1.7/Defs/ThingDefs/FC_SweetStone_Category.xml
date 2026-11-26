@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <!-- Категория еды для сахарных блоков и обломков (чтобы они были в политике питания) -->
+  <ThingCategoryDef>
+    <defName>FC_EdibleSweetStone</defName>
+    <label>sweet stone</label>
+    <parent>Foods</parent>
+  </ThingCategoryDef>
+</Defs>
