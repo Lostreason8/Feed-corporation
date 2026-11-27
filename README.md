@@ -8,6 +8,7 @@ it wasn't made to be taken too seriously, so the game balance is somewhat off—
 
 You need the latest version of the RimRound mod!
 https://github.com/Niwatori401/RimRound/tree/1.6-beta
+Honestly, I didn't look into the DLS dependency. Just in case, buy them all together.
 
 If you are unfamiliar with installing manual mods please follow the instructions here:
 https://rimworldwiki.com/wiki/Installing_mods

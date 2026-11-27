@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+    <!-- Добавляет монстров во все биомы (включая биомы других модов), КРОМЕ Candy land.
+         В Candy land монстры прописаны отдельно в FC_Biome_Candy.xml, поэтому здесь его исключаем,
+         иначе будут дубли и список животных сломается.
+         Число - частота появления (0.1 редко, 1 как обычное животное).
+         Новый монстр = ещё одна такая же строка с его defName. -->
+    <Operation Class="PatchOperationAdd">
+        <success>Always</success>
+        <xpath>/Defs/BiomeDef[defName!="FC_CandyLand"]/wildAnimals</xpath>
+        <value>
+            <FC_CakeMonster>0.2</FC_CakeMonster>
+            <FC_PancakeMonster>0.2</FC_PancakeMonster>
+            <FC_SlimeFeeder>0.4</FC_SlimeFeeder>
+            <FC_JellyWorm>0.2</FC_JellyWorm>
+        </value>
+    </Operation>
+</Patch>

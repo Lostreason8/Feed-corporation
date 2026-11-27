@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+  <!-- Only sugar rock blocks are edible (sugar rock chunks are NOT edible).
+       Если нужна другая питательность - меняй числа <Nutrition> ниже. -->
+
+  <!-- Сахарные блоки -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/ThingDef[defName="FC_BlocksSugarRock"]/statBases</xpath>
+    <value>
+      <Nutrition>0.05</Nutrition>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/ThingDef[defName="FC_BlocksSugarRock"]</xpath>
+    <value>
+      <ingestible>
+        <foodType>Processed</foodType>
+        <preferability>RawBad</preferability>
+        <ingestEffect>EatVegetarian</ingestEffect>
+        <ingestSound>RawVegetable_Eat</ingestSound>
+      </ingestible>
+    </value>
+  </Operation>
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/ThingDef[defName="FC_BlocksSugarRock"]</xpath>
+    <value>
+      <thingCategories>
+        <li>FC_EdibleSweetStone</li>
+      </thingCategories>
+    </value>
+  </Operation>
+
+</Patch>

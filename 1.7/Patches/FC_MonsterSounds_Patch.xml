@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+  <!-- All food monsters (every race that uses the FC_BlobBody body) get the call sound -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/ThingDef[race/body="FC_BlobBody"]/race/lifeStageAges/li[def="AnimalAdult"]</xpath>
+    <value>
+      <soundCall>FC_MonsterCall</soundCall>
+    </value>
+    <success>Always</success>
+  </Operation>
+</Patch>

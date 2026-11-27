@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+  <JobDef>
+    <defName>FC_UseFatItemOn</defName>
+    <driverClass>ToxicRimRound.JobDriver_UseFatItemOn</driverClass>
+    <reportString>using fat device on TargetB.</reportString>
+    <allowOpportunisticPrefix>false</allowOpportunisticPrefix>
+  </JobDef>
+</Defs>

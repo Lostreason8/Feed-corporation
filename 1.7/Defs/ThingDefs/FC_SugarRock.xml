@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- ================ Сахарная порода (по образцу гранита) ================ -->
+
+  <ThingDef ParentName="UglyRockBase" Name="FC_SugarRockBase">
+    <defName>FC_SugarRock</defName>
+    <label>sugar rock</label>
+    <description>Hard crystallized sugar.</description>
+    <graphicData>
+      <color>(236,208,222)</color>
+    </graphicData>
+    <statBases>
+      <MaxHitPoints>620</MaxHitPoints>
+    </statBases>
+    <building>
+      <mineableThing>FC_ChunkSugarRock</mineableThing>
+      <mineableDropChance>0.25</mineableDropChance>
+      <smoothedThing>FC_SmoothedSugarRock</smoothedThing>
+      <naturalTerrain>FC_SugarRock_Rough</naturalTerrain>
+      <leaveTerrain>FC_SugarRock_Smooth</leaveTerrain>
+    </building>
+  </ThingDef>
+
+  <ThingDef ParentName="FC_SugarRockBase">
+    <defName>FC_SmoothedSugarRock</defName>
+    <label>smoothed sugar rock</label>
+    <description>Hard crystallized sugar, polished to a smooth glittering surface.</description>
+    <uiIconPath>Things/Building/Linked/WallSmooth_MenuIcon</uiIconPath>
+    <graphicData>
+      <texPath>Things/Building/Linked/RockSmooth_Atlas</texPath>
+    </graphicData>
+    <statBases>
+      <Beauty>1</Beauty>
+      <MarketValue>7</MarketValue>
+    </statBases>
+    <building>
+      <isNaturalRock>false</isNaturalRock>
+      <canBuildNonEdificesUnder>true</canBuildNonEdificesUnder>
+      <artificialForMeditationPurposes>false</artificialForMeditationPurposes>
+      <smoothedThing />
+      <paintable>true</paintable>
+    </building>
+    <saveCompressible>false</saveCompressible>
+    <repairEffect>Repair</repairEffect>
+  </ThingDef>
+
+  <!-- Обломок сахарной породы -->
+  <ThingDef ParentName="ChunkRockBase">
+    <defName>FC_ChunkSugarRock</defName>
+    <label>sugar rock chunk</label>
+    <graphicData>
+      <color>(240,196,214)</color>
+    </graphicData>
+    <statBases>
+      <Mass>25</Mass>
+    </statBases>
+    <soundDrop>ChunkRock_Drop</soundDrop>
+    <butcherProducts>
+      <FC_BlocksSugarRock>20</FC_BlocksSugarRock>
+    </butcherProducts>
+  </ThingDef>
+
+  <!-- Сахарные блоки (характеристики как у гранита) -->
+  <ThingDef ParentName="StoneBlocksBase">
+    <defName>FC_BlocksSugarRock</defName>
+    <label>sugar rock blocks</label>
+    <description>Blocks of solid sugar rock. As hard as granite, and sweet to look at.</description>
+    <graphicData>
+      <color>(240,196,214)</color>
+    </graphicData>
+    <statBases>
+      <Mass>1.25</Mass>
+      <SharpDamageMultiplier>0.65</SharpDamageMultiplier>
+    </statBases>
+    <stuffProps>
+      <color>(240,196,214)</color>
+      <soundImpactBullet>BulletImpact_Ground</soundImpactBullet>
+      <soundMeleeHitSharp>MeleeHit_Stone</soundMeleeHitSharp>
+      <soundMeleeHitBlunt>MeleeHit_Stone</soundMeleeHitBlunt>
+      <soundImpactMelee>Pawn_Melee_Punch_HitBuilding_Stone</soundImpactMelee>
+      <stuffAdjective>sugar</stuffAdjective>
+      <statFactors>
+        <MaxHitPoints>1.7</MaxHitPoints>
+      </statFactors>
+      <canSuggestUseDefaultStuff>true</canSuggestUseDefaultStuff>
+    </stuffProps>
+  </ThingDef>
+
+  <!-- Рецепт: обломки -> блоки (каменорезный стол) -->
+  <RecipeDef ParentName="MakeStoneBlocksBase">
+    <defName>FC_Make_StoneBlocksSugarRock</defName>
+    <label>make sugar rock blocks</label>
+    <description>Cuts sugar rock chunks into usable blocks.</description>
+    <ingredients>
+      <li>
+        <filter>
+          <thingDefs>
+            <li>FC_ChunkSugarRock</li>
+          </thingDefs>
+        </filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs>
+        <li>FC_ChunkSugarRock</li>
+      </thingDefs>
+    </fixedIngredientFilter>
+    <products>
+      <FC_BlocksSugarRock>20</FC_BlocksSugarRock>
+    </products>
+  </RecipeDef>
+
+  <!-- Полы из сахарных блоков -->
+  <TerrainDef ParentName="TileStoneBase">
+    <defName>FC_TileSugarRock</defName>
+    <label>sugar rock tile</label>
+    <color>(240,196,214)</color>
+    <costList>
+      <FC_BlocksSugarRock>4</FC_BlocksSugarRock>
+    </costList>
+  </TerrainDef>
+
+  <TerrainDef ParentName="FlagstoneBase">
+    <defName>FC_FlagstoneSugarRock</defName>
+    <label>sugar rock flagstone</label>
+    <color>(240,196,214)</color>
+    <costList>
+      <FC_BlocksSugarRock>4</FC_BlocksSugarRock>
+    </costList>
+  </TerrainDef>
+
+</Defs>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- Общее тело для ВСЕХ монстров из еды: одна часть, она же и "здоровье массы". -->
+
+	<BodyPartGroupDef>
+		<defName>FC_BlobBodyGroup</defName>
+		<label>body</label>
+		<labelShort>body</labelShort>
+		<listOrder>100</listOrder>
+	</BodyPartGroupDef>
+
+	<BodyPartDef>
+		<defName>FC_BlobBody</defName>
+		<label>body</label>
+		<hitPoints>120</hitPoints>                                   <!-- здоровье = hitPoints * baseHealthScale монстра -->
+		<permanentInjuryChanceFactor>0</permanentInjuryChanceFactor>
+		<bleedRate>0</bleedRate>
+		<frostbiteVulnerability>0</frostbiteVulnerability>
+		<tags>
+			<li>MovingLimbCore</li>                                     <!-- чтобы монстр мог ходить -->
+		</tags>
+	</BodyPartDef>
+
+	<BodyDef>
+		<defName>FC_BlobBody</defName>
+		<label>blob</label>
+		<corePart>
+			<def>FC_BlobBody</def>
+			<height>Middle</height>
+			<depth>Outside</depth>
+			<groups>
+				<li>FC_BlobBodyGroup</li>
+			</groups>
+		</corePart>
+	</BodyDef>
+
+</Defs>
