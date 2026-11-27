@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- 1. Откачиватель жира (многоразовый, бак 200 л) -->
+  <ThingDef ParentName="ResourceBase">
+    <defName>FC_FatExtractor</defName>
+    <label>fat extractor</label>
+    <description>A portable pump with a 200 liter tank. Removes excess fat from the user (1 kg = 1 L) until they weigh 70 kg or the tank is full. When the tank is full it turns into a fat injector..</description>
+    <graphicData>
+      <texPath>Things/Item/FC_Fat/FC_FatExtractor</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <drawSize>(0.75,0.75)</drawSize>
+    </graphicData>
+    <stackLimit>1</stackLimit>
+    <techLevel>Industrial</techLevel>
+    <thingCategories><li>Manufactured</li></thingCategories>
+    <statBases>
+      <MaxHitPoints>80</MaxHitPoints>
+      <Mass>2</Mass>
+      <MarketValue>150</MarketValue>
+      <Flammability>0.4</Flammability>
+    </statBases>
+    <comps>
+      <li Class="ToxicRimRound.CompProperties_FatExtractor"><capacity>200</capacity></li>
+      <li Class="ToxicRimRound.CompProperties_FatUseOnOthers" />
+      <li Class="CompProperties_Usable">
+        <compClass>CompUsable</compClass>
+        <useJob>UseItem</useJob>
+        <useLabel>Extract fat from self</useLabel>
+        <useDuration>2500</useDuration>
+      </li>
+      <li Class="CompProperties_UseEffect">
+        <compClass>ToxicRimRound.CompUseEffect_FatExtract</compClass>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <!-- 2. Вливатель жира (одноразовый, 200 кг) -->
+  <ThingDef ParentName="ResourceBase">
+    <defName>FC_FatInjector</defName>
+    <label>fat injector</label>
+    <description>A container filled with 200 kg of fat.</description>
+    <graphicData>
+      <texPath>Things/Item/FC_Fat/FC_FatInjector</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <drawSize>(2.0,2.0)</drawSize>
+    </graphicData>
+    <stackLimit>1</stackLimit>
+    <techLevel>Industrial</techLevel>
+    <thingCategories><li>Manufactured</li></thingCategories>
+    <statBases>
+      <MaxHitPoints>80</MaxHitPoints>
+      <Mass>202</Mass>
+      <MarketValue>90</MarketValue>
+      <Flammability>0.6</Flammability>
+    </statBases>
+    <comps>
+      <li Class="ToxicRimRound.CompProperties_FatUseOnOthers" />
+      <li Class="CompProperties_Usable">
+        <compClass>CompUsable</compClass>
+        <useJob>UseItem</useJob>
+        <useLabel>Drain fat (get 200 fat)</useLabel>
+        <useDuration>600</useDuration>
+      </li>
+      <li Class="CompProperties_UseEffect">
+        <compClass>ToxicRimRound.CompUseEffect_FatDrain</compClass>
+      </li>
+    </comps>
+  </ThingDef>
+
+  <!-- 3. Жир (отвратительная еда) -->
+  <ThoughtDef>
+    <defName>FC_AteFat</defName>
+    <thoughtClass>Thought_Memory</thoughtClass>
+    <durationDays>0.6</durationDays>
+    <stackLimit>1</stackLimit>
+    <stages>
+      <li>
+        <label>ate fat</label>
+        <description>That was unbearably disgusting.</description>
+        <baseMoodEffect>-10</baseMoodEffect>
+      </li>
+    </stages>
+  </ThoughtDef>
+
+  <ThingDef ParentName="ResourceBase">
+    <defName>FC_Fat</defName>
+    <label>fat</label>
+    <description>Lard</description>
+    <graphicData>
+      <texPath>Things/Item/FC_Fat/FC_Fat</texPath>
+      <graphicClass>Graphic_Single</graphicClass>
+	  <drawSize>(0.75,0.75)</drawSize>
+    </graphicData>
+    <stackLimit>200</stackLimit>
+	<tickerType>Rare</tickerType>
+    <thingCategories><li>AnimalProductRaw</li></thingCategories>
+    <statBases>
+      <MaxHitPoints>50</MaxHitPoints>
+      <Mass>0.8</Mass>
+      <MarketValue>0.5</MarketValue>
+      <Flammability>1.3</Flammability>
+      <DeteriorationRate>6</DeteriorationRate>
+      <Nutrition>0.80</Nutrition>
+    </statBases>
+    <ingestible>
+      <foodType>AnimalProduct</foodType>
+      <preferability>DesperateOnly</preferability>
+      <tasteThought>FC_AteFat</tasteThought>
+      <ingestEffect>EatVegetarian</ingestEffect>
+      <ingestSound>Meal_Eat</ingestSound>
+    </ingestible>
+    <comps>
+      <li Class="CompProperties_Rottable">
+        <daysToRotStart>8</daysToRotStart>
+        <rotDestroys>true</rotDestroys>
+      </li>
+    </comps>
+  </ThingDef>
+
+</Defs>

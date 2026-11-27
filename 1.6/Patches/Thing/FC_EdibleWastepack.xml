@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+    <Operation Class="PatchOperationAdd">
+        <xpath>Defs/ThingDef[defName="Wastepack"]</xpath>
+        <value>
+            <!-- socialPropernessMatters goes directly into the ThingDef, NOT inside <ingestible> -->
+            <socialPropernessMatters>true</socialPropernessMatters>
+            <ingestible>
+                <foodType>VegetableOrFruit</foodType>
+                <preferability>RawBad</preferability>
+                <tasteThought>AteWastepack</tasteThought>
+                <ingestEffect>EatVegetarian</ingestEffect>
+                <ingestSound>RawVegetable_Eat</ingestSound>
+            </ingestible>
+            <statBases>
+                <Nutrition>20</Nutrition>
+            </statBases>
+            <comps>
+                <li Class="RimRound.Comps.CompProperties_FoodItems_NutritionDensity">
+                    <compClass>RimRound.Comps.ThingComp_FoodItems_NutritionDensity</compClass>
+                    <fullnessToNutritionRatio>0.05</fullnessToNutritionRatio>
+                </li>
+            </comps>
+        </value>
+    </Operation>
+
+</Patch>

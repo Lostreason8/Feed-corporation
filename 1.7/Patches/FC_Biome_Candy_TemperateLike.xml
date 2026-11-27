@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+
+  <!-- Этот патч подгоняет Candy land под ванильный умеренный лес.
+       Список животных (wildAnimals) он НЕ трогает, твои монстры остаются. -->
+
+  <!-- Плотность растений: умеренный лес = 0.65, у нас больше, чтобы было много сладкой травы -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/BiomeDef[defName="FC_CandyLand"]/plantDensity</xpath>
+    <value>
+      <plantDensity>1.5</plantDensity>
+    </value>
+    <success>Always</success>
+  </Operation>
+
+  <!-- Трава: намного больше; деревья и кусты как раньше или реже -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/BiomeDef[defName="FC_CandyLand"]/wildPlants</xpath>
+    <value>
+      <wildPlants>
+        <FC_Plant_Lollipops>6.0</FC_Plant_Lollipops>
+        <FC_Plant_SweetGrass>5.0</FC_Plant_SweetGrass>
+        <FC_Plant_CreamTubes>3.0</FC_Plant_CreamTubes>
+        <FC_Plant_JellyDropBush>0.15</FC_Plant_JellyDropBush>
+        <FC_Plant_MedicinalGrass>0.1</FC_Plant_MedicinalGrass>
+        <FC_Plant_BlueLollipopTree>0.2</FC_Plant_BlueLollipopTree>
+        <FC_Plant_PinkLollipopTree>0.2</FC_Plant_PinkLollipopTree>
+        <FC_Plant_StrawberryCreamTree>0.2</FC_Plant_StrawberryCreamTree>
+        <FC_Plant_BlueberryCreamTree>0.2</FC_Plant_BlueberryCreamTree>
+        <FC_Plant_BlueJellyTree>0.2</FC_Plant_BlueJellyTree>
+        <FC_Plant_PinkJellyTree>0.2</FC_Plant_PinkJellyTree>
+      </wildPlants>
+    </value>
+    <success>Always</success>
+  </Operation>
+
+  <!-- Почвы: граница 0.87, как у умеренного леса -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/BiomeDef[defName="FC_CandyLand"]/terrainsByFertility</xpath>
+    <value>
+      <terrainsByFertility>
+        <li>
+          <terrain>FC_WhippedCream</terrain>
+          <min>-999</min>
+          <max>0.5</max>
+        </li>
+        <li>
+          <terrain>FC_PinkSoil</terrain>
+          <min>0.5</min>
+          <max>0.87</max>
+        </li>
+        <li>
+          <terrain>FC_DeepPinkSoil</terrain>
+          <min>0.87</min>
+          <max>999</max>
+        </li>
+      </terrainsByFertility>
+    </value>
+    <success>Always</success>
+  </Operation>
+
+  <!-- Пруды, как в умеренном лесу: богатая почва, потом мелководье, в центре глубоко -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/BiomeDef[defName="FC_CandyLand"]/terrainPatchMakers</xpath>
+    <value>
+      <terrainPatchMakers>
+        <li>
+          <perlinFrequency>0.015</perlinFrequency>
+          <isPond>true</isPond>
+          <thresholds>
+            <li>
+              <terrain>FC_DeepPinkSoil</terrain>
+              <min>0.73</min>
+              <max>0.80</max>
+            </li>
+            <li>
+              <terrain>FC_MilkChocolateShallow</terrain>
+              <min>0.80</min>
+              <max>0.90</max>
+            </li>
+            <li>
+              <terrain>FC_DarkChocolateDeep</terrain>
+              <min>0.90</min>
+              <max>999</max>
+            </li>
+          </thresholds>
+        </li>
+      </terrainPatchMakers>
+    </value>
+    <success>Always</success>
+  </Operation>
+
+  <!-- Погода: пропорции умеренного леса, дождь и туман шоколадные -->
+  <Operation Class="PatchOperationReplace">
+    <xpath>/Defs/BiomeDef[defName="FC_CandyLand"]/baseWeatherCommonalities</xpath>
+    <value>
+      <baseWeatherCommonalities>
+        <Clear>18</Clear>
+        <FC_ChocolateFog>1</FC_ChocolateFog>
+        <FC_ChocolateRain>3</FC_ChocolateRain>
+        <DryThunderstorm>1</DryThunderstorm>
+        <FC_ChocolateThunderstorm>1</FC_ChocolateThunderstorm>
+        <FC_ChocolateFoggyRain>1</FC_ChocolateFoggyRain>
+        <SnowGentle>4</SnowGentle>
+        <SnowHard>4</SnowHard>
+      </baseWeatherCommonalities>
+    </value>
+    <success>Always</success>
+  </Operation>
+
+  <!-- Остальные настройки умеренного леса -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/BiomeDef[defName="FC_CandyLand"]</xpath>
+    <value>
+      <forageability>1</forageability>
+      <foragedFood>RawBerries</foragedFood>
+      <wildPlantRegrowDays>20</wildPlantRegrowDays>
+      <lakeBeachTerrain>FC_PinkSugar</lakeBeachTerrain>
+      <riverbankTerrain>FC_PinkSugar</riverbankTerrain>
+      <riverbankSizeRange>6~8</riverbankSizeRange>
+    </value>
+    <success>Always</success>
+  </Operation>
+
+</Patch>

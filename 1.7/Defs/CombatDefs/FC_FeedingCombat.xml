@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+	<!-- Урон-пустышка: ничего не ломает, нужен только как "тип удара" -->
+	<DamageDef>
+		<defName>FC_FeedingHit</defName>
+		<label>force-feeding</label>
+		<workerClass>DamageWorker</workerClass>
+		<externalViolence>true</externalViolence>
+		<harmsHealth>false</harmsHealth>
+		<makesBlood>false</makesBlood>
+		<makesAnimalsFlee>false</makesAnimalsFlee>
+		<defaultDamage>1</defaultDamage>
+		<overkillPctToDestroyPart>0~0</overkillPctToDestroyPart>
+	</DamageDef>
+
+	<!-- Тип атаки монстров-еды (общий для всех монстров) -->
+	<ToolCapacityDef>
+		<defName>FC_Feeding</defName>
+		<label>force-feed</label>
+	</ToolCapacityDef>
+
+	<!-- Манёвр: использует наш C#-удар Verb_FeedingMelee -->
+	<ManeuverDef>
+		<defName>FC_FeedingSlam</defName>
+		<requiredCapacity>FC_Feeding</requiredCapacity>
+		<verb>
+			<verbClass>ToxicRimRound.Verb_FeedingMelee</verbClass>
+			<meleeDamageDef>FC_FeedingHit</meleeDamageDef>
+		</verb>
+		<logEntryDef>MeleeAttack</logEntryDef>
+		<combatLogRulesHit>Maneuver_Smash_MeleeHit</combatLogRulesHit>
+		<combatLogRulesDeflect>Maneuver_Smash_MeleeDeflect</combatLogRulesDeflect>
+		<combatLogRulesMiss>Maneuver_Smash_MeleeMiss</combatLogRulesMiss>
+		<combatLogRulesDodge>Maneuver_Smash_MeleeDodge</combatLogRulesDodge>
+	</ManeuverDef>
+
+</Defs>

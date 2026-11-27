@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Patch>
+  <!-- Везде, где топливом служит обычная древесина (костёр, печи, ...), можно класть и сладкую -->
+  <Operation Class="PatchOperationAdd">
+    <xpath>/Defs/ThingDef/comps/li/fuelFilter/thingDefs[li="WoodLog"]</xpath>
+    <value>
+      <li>FC_SweetWood</li>
+    </value>
+    <success>Always</success>
+  </Operation>
+</Patch>

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- Крафт откачивателя: 2 компонента + 120 ткани, нужна технология Протезирование -->
+  <RecipeDef>
+    <defName>FC_Make_FatExtractor</defName>
+    <label>make fat extractor</label>
+    <description>Make a fat extractor.</description>
+    <jobString>Making a fat extractor.</jobString>
+    <workSpeedStat>GeneralLaborSpeed</workSpeedStat>
+    <effectWorking>Smith</effectWorking>
+    <soundWorking>Recipe_Machining</soundWorking>
+    <workAmount>6000</workAmount>
+    <researchPrerequisite>Prosthetics</researchPrerequisite>
+    <recipeUsers><li>TableMachining</li></recipeUsers>
+    <ingredients>
+      <li>
+        <filter><thingDefs><li>ComponentIndustrial</li></thingDefs></filter>
+        <count>2</count>
+      </li>
+      <li>
+        <filter><thingDefs><li>Cloth</li></thingDefs></filter>
+        <count>120</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs><li>ComponentIndustrial</li><li>Cloth</li></thingDefs>
+    </fixedIngredientFilter>
+    <products><FC_FatExtractor>1</FC_FatExtractor></products>
+    <skillRequirements><Crafting>4</Crafting></skillRequirements>
+  </RecipeDef>
+
+</Defs>

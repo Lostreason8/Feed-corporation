@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<Defs>
+
+  <!-- Medical procedure: give a pig pill to a patient (instant, no anesthesia, no risk) -->
+  <RecipeDef>
+    <defName>FC_Administer_PigPill</defName>
+    <label>administer pink pill</label>
+    <description>Give a pink pill to the patient.</description>
+    <workerClass>Recipe_AdministerIngestible</workerClass>
+    <jobString>Administering pink pill.</jobString>
+    <workAmount>100</workAmount>
+    <workSpeedStat>MedicalOperationSpeed</workSpeedStat>
+    <workSkill>Medicine</workSkill>
+    <effectWorking>Surgery</effectWorking>
+    <soundWorking>Recipe_Surgery</soundWorking>
+    <requiredGiverWorkType>Doctor</requiredGiverWorkType>
+    <anesthetize>false</anesthetize>
+    <targetsBodyPart>false</targetsBodyPart>
+    <isViolation>false</isViolation>
+    <surgerySuccessChanceFactor>99999</surgerySuccessChanceFactor>
+    <deathOnFailedSurgeryChance>0</deathOnFailedSurgeryChance>
+    <ingredients>
+      <li>
+        <filter><thingDefs><li>FC_PigPill</li></thingDefs></filter>
+        <count>1</count>
+      </li>
+    </ingredients>
+    <fixedIngredientFilter>
+      <thingDefs><li>FC_PigPill</li></thingDefs>
+    </fixedIngredientFilter>
+    <recipeUsers>
+      <li>Human</li>
+    </recipeUsers>
+  </RecipeDef>
+
+</Defs>
