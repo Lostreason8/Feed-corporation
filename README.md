@@ -9,9 +9,9 @@
 # Feed corporation
 
 <ul>
-  <li>Biome</li>
+  <li>**Biome**</li>
   <ul>
-    <li>Sweet Biome</li>
+    <li>**Sweet Biome**</li>
     <ul>
       <li>In the Sweet Biome, you'll be able to eat sweet wood and sugar cubes.</li>
       <li>You'll also encounter enemies like the Pancake Monster, Cake Monster, Tentacle Worm, and Rose Slime. They're aggressive and will happily feed you if you get too close!</li>
@@ -20,7 +20,7 @@
   </ul>
   <br>
 
-  <li>Items</li>
+  <li>**Items**</li>
   <ul>
     <li>Fat extractor is a disposable item used to pump fat out of a colonist. Once filled, the item converts completely into a fat injector. It can be used to pump all the fat into the colonist or extract the fat, which can be processed into chemical fuel.</li>
     <li>Blueberry, after eating a colonist swells up like a blueberry, it can be found in sealed lockers, safes (complexes, bunkers, etc.) drop chance 5%.</li>
@@ -29,14 +29,14 @@
   </ul>
   <br>
 
-  <li>Factions</li>
+  <li>**Factions**</li>
   <ul>
     <li>Farmers, an enemy faction armed only with weight-gaining weapons.</li>
     <li>Chefs, an enemy faction armed only with weight-gaining weapons.</li>
     <li>Yes they are the same.</li>
   </ul>
   <br>
-  <li>Settings mod</li>
+  <li>**Settings mod**</li>
   <ul>
     <li>Transforms the damage of toxins into an increase in excess weight.</li>
     <li>Some mech weapons and mech turrets convert damage into extra weight, without injury.</li>
